@@ -66,7 +66,7 @@ export default function RootLayout({
                 )}
             >
                 <SmoothScroll>
-                    <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+                    <div className="from-background-gradient-start to-background-gradient-end fixed inset-0 -z-10 bg-gradient-to-r"></div>
                     <header></header>
                     <main className="row-start-2 flex h-[300vw] min-h-screen w-full flex-col items-center gap-8 sm:items-start">
                         {children}
