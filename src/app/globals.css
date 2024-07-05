@@ -39,8 +39,8 @@
     }
 
     .dark {
-        --background: 0 0% 6%; /* #0f0f0f */
-        --foreground: 210 100% 100%; /* #00ffff */
+        --background: 228 16% 6%; /* #0f0f0f */
+        --foreground: 240 25% 98%; /* #FAFAFC */
 
         --background-gradient-start: 228 16% 6%; /* #101212 */
         --background-gradient-end: 240 10% 6%; /* #0a0b0b */
@@ -51,14 +51,14 @@
         --popover: 240 10% 3.9%; /* #0a0b0b */
         --popover-foreground: 0 0% 98%; /* #fafafa */
 
-        --primary: 0 0% 98%; /* #fafafa */
-        --primary-foreground: 240 5.9% 10%; /* #1a1b1b */
+        --primary: 248 28% 48%; /* #61589D */
+        --primary-foreground: 248 28% 48%; /* #61589D */
 
         --secondary: 240 3.7% 15.9%; /* #262727 */
         --secondary-foreground: 0 0% 98%; /* #fafafa */
 
-        --muted: 240 3.7% 15.9%; /* #262727 */
-        --muted-foreground: 240 5% 64.9%; /* #a2a2a2 */
+        --muted: 216 10% 90%; /* #262727 */
+        --muted-foreground: 216 10% 90%; /* #a2a2a2 */
 
         --accent: 240 3.7% 15.9%; /* #262727 */
         --accent-foreground: 0 0% 98%; /* #fafafa */
@@ -82,15 +82,15 @@
 }
 
 @layer components {
+    .max-width-wrapper {
+        @apply w-full;
+        padding-left: max(8%, 116px);
+        padding-right: max(8%, 116px);
+    }
 }
 
 @layer utilities {
-    .background-dark-gradient {
-        background: linear-gradient(
-            241.19deg,
-            rgb(0, 0, 0) 0%,
-            rgb(19, 19, 19) 49.059%,
-            rgb(7, 7, 7) 93.806%
-        );
+    .background-gradient {
+        @apply bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(13,14,18,0))];
     }
 }
