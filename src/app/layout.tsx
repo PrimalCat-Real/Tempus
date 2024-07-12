@@ -1,19 +1,11 @@
-import localFont from 'next/font/local'
 import './globals.css'
 import SmoothScroll from '@/components/providers/smooth-scroll'
 import { cn } from '@/lib/utils'
 import { Vortex } from '@/components/shared/vortex'
 import { Metadata } from 'next'
 import { siteConfig } from '@/config/site'
-
-const geistSans = localFont({
-    src: './fonts/GeistVF.woff',
-    variable: '--font-geist-sans',
-})
-const geistMono = localFont({
-    src: './fonts/GeistMonoVF.woff',
-    variable: '--font-geist-mono',
-})
+import Header from '@/components/layout/home/header'
+import { inter, nunito, open_sans } from './fonts/fonts'
 
 export const metadata: Metadata = {
     title: 'Tempus',
@@ -63,12 +55,16 @@ export default function RootLayout({
             <body
                 className={cn(
                     'dark w-screen overflow-hidden bg-background font-sans antialiased transition-colors duration-300',
+                    inter.variable,
+                    open_sans.variable,
+                    nunito.variable,
                 )}
             >
                 <SmoothScroll>
-                    <div className="from-background-gradient-start to-background-gradient-end fixed inset-0 -z-10 bg-gradient-to-r"></div>
-                    <header></header>
-                    <main className="row-start-2 flex h-[300vw] min-h-screen w-full flex-col items-center gap-8 sm:items-start">
+                    <div className="background-gradient fixed top-0 z-[-2] h-screen w-screen"></div>
+                    {/* <div className="fixed inset-0 -z-10 bg-gradient-to-r from-background-gradient-start to-background-gradient-end" /> */}
+                    <Header />
+                    <main className="row-start-2 flex h-[300vh] min-h-screen w-full flex-col items-center gap-8 sm:items-start">
                         {children}
                     </main>
                     <footer className=""></footer>

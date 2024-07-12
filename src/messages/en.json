@@ -1,0 +1,21 @@
+{
+    "header": {
+        "title": "My Application",
+        "navigation": {
+            "home": "Home",
+            "about": "About Us",
+            "services": {
+                "title": "Services",
+                "webDevelopment": "Web Development",
+                "appDevelopment": "App Development",
+                "seo": "SEO Optimization"
+            },
+            "contact": "Contact Us"
+        },
+        "profile": {
+            "title": "Profile",
+            "settings": "Settings",
+            "logout": "Logout"
+        }
+    }
+}

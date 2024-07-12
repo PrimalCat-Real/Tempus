@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-
 const config = {
     darkMode: ['class'],
     content: [
@@ -18,6 +17,16 @@ const config = {
             },
         },
         extend: {
+            rounded: {
+                inherit: 'inherit',
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            },
+            fontFamily: {
+                sans: 'var(--font-inter)',
+                open: 'var(--font-open-sans)',
+            },
             colors: {
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',

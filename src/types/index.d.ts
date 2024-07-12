@@ -8,3 +8,24 @@ export type SiteConfig = {
     //     github: string
     // }
 }
+
+export type SlideTabPosition = {
+    left: number
+    width: number
+    opacity: number
+}
+
+export interface BlurFadeProps {
+    children: React.ReactNode
+    className?: string
+    variant?: {
+        hidden: { y: number }
+        visible: { y: number }
+    }
+    duration?: number
+    delay?: number
+    yOffset?: number
+    inView?: boolean
+    inViewMargin?: string
+    blur?: string
+}
